@@ -1,0 +1,13 @@
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Bases de LAPOP: la licencia no permite redistribuirlas
+data/*
+!data/raw/
+data/raw/*
+!data/raw/.gitkeep
+
+# modelos.rds guarda el diseño muestral con los microdatos
+output/tables/modelos.rds
