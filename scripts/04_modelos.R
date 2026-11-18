@@ -52,11 +52,12 @@ saveRDS(modelos, "output/tables/modelos.rds")
 
 modelsummary(modelos,
              exponentiate = TRUE,
-             stars = TRUE,
+             statistic = "conf.int",
+             stars = c("*" = 0.05, "**" = 0.01, "***" = 0.001),
              coef_map = nombres,
              gof_map = "nobs",
              title = "Razones de odds de estar satisfecho con la democracia",
-             notes = c("Regresión logística con efectos fijos de ola y diseño muestral. Error estándar entre paréntesis.",
+             notes = c("Regresión logística con efectos fijos de ola y diseño muestral. Intervalos de confianza de 95% entre corchetes.",
                        "Categorías de referencia: perdedor, básica o menos, ingreso bajo, 18-29, urbana, otras regiones, hombre.",
                        "Fuente: Barómetro de las Américas (LAPOP), Chile 2006-2026. Sin la ola telefónica de 2021."),
              output = "output/tables/t3_modelos.html")
