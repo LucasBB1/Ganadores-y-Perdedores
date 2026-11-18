@@ -48,7 +48,7 @@ f4 <- pred %>%
   theme_minimal() +
   theme(strip.text.y = element_text(angle = 0, hjust = 0))
 
-ggsave("output/figures/f4_probabilidades.png", f4, width = 7, height = 7.5, dpi = 300)
+ggsave("output/figures/f4_probabilidades.png", f4, width = 7, height = 7.5, dpi = 300, bg = "white")
 
 # Razones de odds por período
 nombres <- c("educMedia" = "Educación: media",
@@ -83,4 +83,4 @@ f5 <- ggplot(coefs, aes(x = or, y = termino, colour = periodo)) +
   theme_minimal() +
   theme(legend.position = "bottom")
 
-ggsave("output/figures/f5_coeficientes_periodo.png", f5, width = 7, height = 6, dpi = 300)
+ggsave("output/figures/f5_coeficientes_periodo.png", f5, width = 7, height = 6, dpi = 300, bg = "white")
